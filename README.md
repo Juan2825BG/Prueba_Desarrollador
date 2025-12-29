@@ -1,7 +1,7 @@
 #  Prueba técnica desarrollador Junior AZ Smart Technology
 
 ### Descripción del Proyecto
-Este proyecto es una aplicación web desarrollada en **.NET 8 ASP.NET Core MVC)** diseñada para gestionar un catálogo de autores y sus libros. La aplicación permite realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) de manera eficiente, asegurando la integridad referencial de los datos y una experiencia de usuario fluida.
+Este proyecto es una aplicación web desarrollada en **.NET ASP.NET Core MVC)** diseñada para gestionar un catálogo de autores y sus libros. La aplicación permite realizar operaciones CRUD (Crear, Leer, Actualizar y Eliminar) de manera eficiente, asegurando la integridad referencial de los datos y una experiencia de usuario fluida.
 
 ###Diagrama entidad relación de la base de datos 
 
