@@ -1,0 +1,65 @@
+﻿@model Prueba_Desarrollador.Models.Db.Libro
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="mb-4">
+                <h2 class="fw-bold text-dark">Agregar Libro</h2>
+                <p class="text-muted">Ingresa la información para registrar un nuevo libro.</p>
+            </div>
+
+            <div class="table-rounded-wrapper p-5 shadow-sm bg-white">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-4"></div>
+
+                    <div class="form-group mb-5">
+                        <label asp-for="Titulo" class="form-label fw-bold text-dark mb-3">Título del Libro</label>
+                        <div class="input-group custom-input-container">
+                            <span class="input-group-text bg-transparent border-0 px-3">
+                                <i class="bi bi-book text-muted"></i>
+                            </span>
+                            <input asp-for="Titulo"
+                                   class="form-control border-0 py-3 ps-2"
+                                   placeholder="Ej: Cien años de soledad" />
+                        </div>
+                        <span asp-validation-for="Titulo" class="text-danger small mt-2 d-block"></span>
+                    </div>
+
+                    <div class="form-group mb-5">
+                        <label asp-for="AutorId" class="form-label fw-bold text-dark mb-3">Seleccionar Autor</label>
+                        <div class="input-group custom-input-container">
+                            <span class="input-group-text bg-transparent border-0 px-3">
+                                <i class="bi bi-person text-muted"></i>
+                            </span>
+                            <select asp-for="AutorId" class="form-select border-0 py-3 ps-2" asp-items="ViewBag.AutorId">
+                                <option value="">-- Seleccione un autor --</option>
+                            </select>
+                        </div>
+                        <span asp-validation-for="AutorId" class="text-danger small mt-2 d-block"></span>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center mt-5 pt-2">
+                        <a asp-action="Index" class="btn-return-simple text-decoration-none">
+                            <i class="bi bi-arrow-left"></i> Cancelar
+                        </a>
+
+                        <button type="submit" class="btn-add-submit px-4 py-2">
+                            <span>Agregar</span>
+                            <i class="bi bi-plus-circle-fill ms-2"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

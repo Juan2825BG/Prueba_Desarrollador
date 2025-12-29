@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biblioteca</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Prueba_Desarrolladora.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark ocean-fluid-nav mb-3">
+            <div class="fluid-waves">
+                <div class="wave-blob"></div>
+                <div class="wave-blob"></div>
+                <div class="wave-blob"></div>
+            </div>
+
+            <div class="container-fluid position-relative" style="z-index: 20;">
+                <a class="navbar-brand fw-bold fs-3" asp-controller="Home" asp-action="Index">
+                    <i class="bi bi-journal-bookmark-fill"></i> Mi biblioteca
+                </a>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-white nav-link-grow fs-5 mx-2" asp-controller="Home" asp-action="Index">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white nav-link-grow fs-5 mx-2" asp-controller="Libros" asp-action="Index">Libros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white nav-link-grow fs-5 mx-2" asp-controller="Autores" asp-action="Index">Autores</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main-content-glass">
+        <div class="container py-4">
+            <main role="main">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+
+    <footer class="ocean-fluid-footer">
+        <div class="fluid-waves">
+            <div class="wave-blob"></div>
+            <div class="wave-blob"></div>
+            <div class="wave-blob"></div>
+        </div>
+
+        <div class="container text-center py-3 position-relative" style="z-index: 20;">
+            <span class="text-white">
+                &copy; 2025 - <strong>Prueba Técnica Junior .NET</strong> - AZ Smart Technology
+            </span>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

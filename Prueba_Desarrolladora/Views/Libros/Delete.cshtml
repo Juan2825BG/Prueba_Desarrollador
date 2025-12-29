@@ -1,0 +1,55 @@
+﻿@model Prueba_Desarrollador.Models.Db.Libro
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-7">
+            <div class="mb-5 text-center">
+                <h2 class="fw-bold text-danger">Eliminar libro</h2>
+                <p class="text-muted">¿Estás seguro de que deseas eliminar este libro?</p>
+            </div>
+
+            <div class="table-rounded-wrapper p-5 shadow-sm bg-white border-top border-danger border-5">
+                <div class="mb-4">
+                    <h4 class="text-dark fw-bold"><i class="bi bi-exclamation-triangle-fill text-warning me-2"></i> Confirmar Eliminación</h4>
+                    <hr />
+                </div>
+
+                <div class="row mb-5">
+                    <div class="col-sm-4">
+                        <span class="fw-bold text-muted uppercase small">@Html.DisplayNameFor(model => model.Titulo)</span>
+                        <p class="fs-5 text-dark">@Html.DisplayFor(model => model.Titulo)</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <span class="fw-bold text-muted uppercase small">@Html.DisplayNameFor(model => model.Autor)</span>
+                        <p class="fs-5 text-dark">@(Model.Autor?.Nombre ?? "Sin autor")</p>
+                    </div>
+                </div>
+
+                <form asp-action="Delete">
+                    <input type="hidden" asp-for="Id" />
+
+                    <div class="d-flex justify-content-between align-items-center mt-4">
+                        <a asp-action="Index" class="btn-return-simple text-decoration-none">
+                            <i class="bi bi-arrow-left"></i> Cancelar
+                        </a>
+
+                        <button type="submit" class="btn-delete-glass px-4 py-2">
+                            <span class="btn-text">Eliminar </span>
+                            <div class="icon-container">
+                                <i class="bi bi-trash3-fill"></i>
+                            </div>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>

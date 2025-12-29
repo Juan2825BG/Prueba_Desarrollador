@@ -1,0 +1,589 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #ffffff
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+.ocean-fluid-nav {
+    background: #011627;
+    height: 90px;
+    position: relative;
+    overflow: hidden; 
+}
+
+.fluid-waves {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.wave-blob {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(0, 210, 255, 0.5) 0%, transparent 70%);
+    border-radius: 50%; 
+    animation: liquid-float 15s infinite ease-in-out;
+    filter: blur(8px);
+    opacity: 0.6;
+}
+
+.wave-blob:nth-child(1) {
+    top: -50px;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.wave-blob:nth-child(2) {
+    top: 10px;
+    right: 15%;
+    background: radial-gradient(circle, rgba(78, 67, 118, 0.4) 0%, transparent 70%);
+    animation-duration: 20s;
+    animation-direction: reverse;
+}
+
+.wave-blob:nth-child(3) {
+    bottom: -60px;
+    left: 40%;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.1);
+    animation-duration: 12s;
+}
+
+@keyframes liquid-float {
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+        border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+    }
+
+    33% {
+        transform: translate(80px, 30px) rotate(120deg) scale(1.2);
+        border-radius: 60% 40% 30% 70% / 50% 30% 70% 50%;
+    }
+
+    66% {
+
+        transform: translate(-50px, -20px) rotate(240deg) scale(0.8);
+        border-radius: 30% 70% 50% 50% / 70% 50% 30% 50%;
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(360deg) scale(1);
+        border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+    }
+}
+
+.nav-link-grow {
+    font-size: 1.2rem !important;
+    font-weight: 500;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+    .nav-link-grow:hover {
+        transform: scale(1.35);
+        color: #00d2ff !important;
+        text-shadow: 0 0 10px rgba(0, 210, 255, 0.8);
+    }
+
+
+
+.ocean-fluid-footer {
+    background: #011627;
+    height: 60px;
+    position: fixed; 
+    bottom: 0; 
+    width: 100%; 
+    overflow: hidden;
+    z-index: 1000; 
+    border-top: 2px solid rgba(0, 210, 255, 0.3);
+}
+
+
+body {
+    margin-bottom: 70px; 
+}
+
+
+.ocean-fluid-footer .wave-blob {
+    opacity: 0.4;
+    animation-duration: 20s;
+}
+
+.main-content-glass {
+    background-color: #ffffff !important; 
+    border: none !important; 
+    box-shadow: none !important; 
+    margin: 0 !important; 
+    padding: 0;
+    min-height: 75vh; 
+} overflow: hidden;
+}
+
+.ocean-fluid-nav, .ocean-fluid-footer {
+    border: none !important;
+    margin-bottom: 0 !important;
+}
+
+.table-rounded-wrapper {
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.table-no-lines {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: none !important;
+}
+
+    .table-no-lines thead th {
+        background-color: #fcfcfc;
+        color: #011627;
+        padding: 20px;
+        border: none !important;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .table-no-lines td {
+        padding: 20px;
+        border: none !important;
+        background-color: transparent;
+    }
+
+
+.row-hover-animate {
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.row-hover-animate:hover {
+    transform: scale(1.02);
+    background-color: #f8fbff !important;
+    box-shadow: 0 10px 20px rgba(0, 132, 255, 0.1);
+    cursor: pointer;
+}
+
+
+.btn-circular-manage {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 2px solid #011627;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #011627;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-circular-manage:hover {
+    background-color: #011627;
+    color: white;
+    transform: translateY(-5px);
+}
+
+.btn-mega-card {
+    width: 280px; 
+    height: 280px;
+    border-radius: 60px; 
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.4); 
+    border: 2px solid #011627;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1;
+}
+
+
+.slideshow-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: -1;
+}
+
+
+@keyframes book-slideshow {
+    0% {
+        background-image: url('https://images.unsplash.com/photo-1544640808-32ca72ac7f37?q=80&w=400');
+    }
+
+    33% {
+        background-image: url('https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=400');
+    }
+
+    66% {
+        background-image: url('https://images.unsplash.com/photo-1516979187457-637abb4f9353?q=80&w=400');
+    }
+
+    100% {
+        background-image: url('https://images.unsplash.com/photo-1544640808-32ca72ac7f37?q=80&w=400');
+    }
+}
+
+
+@keyframes author-slideshow {
+    0% {
+        background-image: url('https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=400');
+    }
+
+    33% {
+        background-image: url('https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?q=80&w=400');
+    }
+
+    66% {
+        background-image: url('https://images.unsplash.com/photo-1519791883288-dc8bd696e667?q=80&w=400');
+    }
+
+    100% {
+        background-image: url('https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=400');
+    }
+}
+
+
+.btn-mega-card:hover {
+    transform: scale(1.1) translateY(-10px);
+    border-color: transparent;
+    box-shadow: 0 20px 40px rgba(1, 22, 39, 0.2);
+}
+
+
+.btn-books-multi:hover .slideshow-overlay {
+    opacity: 1;
+    animation: book-slideshow 6s infinite;
+}
+
+.btn-authors-multi:hover .slideshow-overlay {
+    opacity: 1;
+    animation: author-slideshow 6s infinite;
+}
+
+
+.btn-mega-card:hover .slideshow-overlay {
+    filter: brightness(0.5);
+}
+
+.btn-label {
+    color: #011627;
+    font-size: 1.8rem;
+    font-weight: bold;
+    z-index: 2;
+    transition: color 0.4s;
+}
+
+.btn-mega-card:hover .btn-label {
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* --- Botón Añadir (+) --- */
+.btn-add-circle {
+    width: 45px;
+    height: 45px;
+    background-color: #011627;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-size: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+    .btn-add-circle:hover {
+        transform: scale(1.2) rotate(90deg);
+        background-color: #0b3d66;
+        color: #00d2ff;
+    }
+
+
+.action-btn {
+    font-size: 1.2rem;
+    margin: 0 8px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.edit-btn {
+    color: #011627;
+}
+
+    .edit-btn:hover {
+        color: #00d2ff;
+        transform: scale(1.3);
+    }
+
+.delete-btn {
+    color: #dc3545;
+}
+
+    .delete-btn:hover {
+        color: #a71d2a;
+        transform: scale(1.3) rotate(10deg);
+    }
+
+
+.table-no-lines th {
+    border-bottom: 2px solid #f0f0f0 !important;
+    padding-bottom: 15px !important;
+}
+
+.row-hover-animate:hover {
+    background-color: rgba(0, 210, 255, 0.05) !important;
+}
+
+
+.btn-return-custom {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 30px;
+    background-color: transparent;
+    color: #011627;
+    border: 2px solid #011627;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+    .btn-return-custom i {
+        font-size: 1.4rem;
+        transition: transform 0.3s ease;
+    }
+
+  
+    .btn-return-custom:hover {
+        background-color: #011627;
+        color: #ffffff;
+        box-shadow: 0 8px 20px rgba(1, 22, 39, 0.2);
+        transform: translateY(-3px);
+    }
+
+        .btn-return-custom:hover i {
+
+            animation: arrow-bounce 0.8s infinite;
+        }
+
+@keyframes arrow-bounce {
+    0%, 100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(-8px);
+    }
+}
+
+.btn-return-custom:active {
+    transform: scale(0.95);
+}
+
+
+.custom-input {
+    border: 2px solid #f0f0f0;
+    border-radius: 12px !important;
+    padding: 12px;
+    transition: all 0.3s ease;
+}
+
+    .custom-input:focus {
+        border-color: #011627;
+        box-shadow: none;
+        background-color: #f8fbff;
+    }
+
+.input-group-text {
+    border: 2px solid #f0f0f0;
+    border-radius: 12px 0 0 12px !important;
+    color: #011627;
+}
+
+
+.btn-add-submit {
+    background-color: #011627;
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 50px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+    .btn-add-submit:hover {
+        transform: scale(1.05) translateY(-2px);
+        box-shadow: 0 10px 20px rgba(1, 22, 39, 0.2);
+        background-color: #0b3d66;
+    }
+
+    .btn-add-submit i {
+        font-size: 1.2rem;
+        transition: transform 0.4s ease;
+    }
+
+    .btn-add-submit:hover i {
+        transform: rotate(180deg); 
+    }
+
+
+.btn-return-simple {
+    color: #6c757d;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+    .btn-return-simple:hover {
+        color: #dc3545;
+    }
+
+
+.custom-input-container {
+    border: 2px solid #dee2e6;
+    border-radius: 15px !important;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    overflow: hidden; 
+
+
+.custom-input-container:focus-within {
+    border-color: #011627;
+    box-shadow: 0 0 0 0.2rem rgba(1, 22, 39, 0.1);
+}
+
+.custom-input-container .form-control,
+.custom-input-container .form-select,
+.custom-input-container .input-group-text {
+    border: none !important;
+    box-shadow: none !important;
+    background-color: transparent !important;
+    outline: none !important;
+}
+
+
+.custom-input-container .form-control,
+.custom-input-container .form-select {
+    padding-left: 10px !important;
+}
+
+
+.custom-input-container i {
+    color: #011627;
+    font-size: 1.1rem;
+}
+
+/* Botón Estilo Glassmorphism Rojo */
+.btn-delete-glass {
+    background: linear-gradient(135deg, #ff4b2b 0%, #dc3545 100%);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px; /* Esquinas suavizadas como en la imagen */
+    font-weight: 600;
+    padding: 12px 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 8px 20px rgba(220, 53, 69, 0.3);
+}
+
+/* Efecto de Brillo Reflejado (Línea blanca diagonal) */
+.btn-delete-glass::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 100%;
+    height: 200%;
+    background: linear-gradient(
+        to right, 
+        transparent, 
+        rgba(255, 255, 255, 0.4), 
+        transparent
+    );
+    transform: rotate(45deg);
+    transition: all 0.6s ease;
+}
+
+/* --- ANIMACIONES AL HOVER --- */
+
+.btn-delete-glass:hover {
+    transform: scale(1.05); /* Crece un poco */
+    box-shadow: 0 12px 25px rgba(220, 53, 69, 0.5);
+    background: linear-gradient(135deg, #dc3545 0%, #ff4b2b 100%);
+}
+
+/* El brillo cruza el botón al pasar el mouse */
+.btn-delete-glass:hover::before {
+    left: 100%;
+}
+
+/* El icono de la papelera gira 360 grados como tu botón de agregar */
+.btn-delete-glass i {
+    transition: transform 0.6s ease-in-out;
+}
+
+.btn-delete-glass:hover i {
+    transform: rotate(360deg);
+}
+
+/* Efecto de pulsación al hacer clic */
+.btn-delete-glass:active {
+    transform: scale(0.95);
+}
